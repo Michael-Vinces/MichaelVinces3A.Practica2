@@ -22,7 +22,7 @@ namespace MichaelVinces3A.Practica2
             Console.WriteLine("--------| PRÁCTICA 2 |--------");
             Console.WriteLine("Programas elaborados por Michael Vinces Andrade<\n");
             Console.WriteLine("01. El Mayor de dos números");
-            Console.WriteLine("02. Par o Impar");
+            Console.WriteLine("02. Número Par");
             Console.WriteLine("03. El mayor de tres números");
             Console.WriteLine("04. ");
             Console.WriteLine("05. Suma de 5 números");
@@ -78,9 +78,23 @@ namespace MichaelVinces3A.Practica2
             {
                 Console.WriteLine("Programa 2");
                 Console.WriteLine("*************************************************");
-                Console.WriteLine("********                                 ********");
+                Console.WriteLine("********           Número Par            ********");
                 Console.WriteLine("*************************************************");
+                int Residuo=0;
+                Console.Write("Ingrese un número: ");
+                int Numero = int.Parse(Console.ReadLine());
+                Residuo = Numero % 2;
+                Console.WriteLine("________________________________________________");
+                if (Residuo == 0)
+                {
+                    Console.WriteLine("El número "+Numero+" es par.");
+                }
+                else
+                {
+                    Console.WriteLine("El número "+Numero+" no es par.");
+                }
                 
+                Console.WriteLine("________________________________________________");
                 Console.WriteLine("\nPresione Enter para volver al menú...");
                 Console.ReadLine();
                 Console.Clear();
