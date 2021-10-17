@@ -39,11 +39,35 @@ namespace MichaelVinces3A.Practica2
             Console.Clear();
             if (opcion == "1")
             {
-                Console.WriteLine("Programa 1");
-                Console.WriteLine("*************************************************");
-                Console.WriteLine("**************                       ************");
-                Console.WriteLine("*************************************************");
-
+                int Numero1, Numero2;
+                do
+                {
+                    Console.WriteLine("Programa 1");
+                    Console.WriteLine("*************************************************");
+                    Console.WriteLine("******      EL MAYOR DE DOS NÚMEROS      ********");
+                    Console.WriteLine("*************************************************");                
+                    Console.Write("Ingrese el primer número: ");
+                    Numero1 = int.Parse(Console.ReadLine());
+                    Console.Write("Ingrese el segundo número: ");
+                    Numero2 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("________________________________________________");
+                    if (Numero1 == Numero2)
+                    {
+                        Console.WriteLine("ERROR... Los números ingresados son iguales, intente nuevamente...");
+                        Console.ReadLine();
+                        Console.Clear();                       
+                    }
+                    if (Numero1 > Numero2)
+                    {
+                        Console.WriteLine("El número "+Numero1+" es mayor que "+Numero2);
+                        Console.WriteLine("________________________________________________");
+                    }
+                    if (Numero1 < Numero2)
+                    {
+                        Console.WriteLine("El número " + Numero2 + " es mayor que " + Numero1);
+                        Console.WriteLine("________________________________________________");
+                    }
+                } while (Numero1 == Numero2);
                 Console.WriteLine("\nPresione Enter para volver al menú...");
                 Console.ReadLine();
                 Console.Clear();
