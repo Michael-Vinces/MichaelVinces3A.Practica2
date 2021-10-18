@@ -193,9 +193,21 @@ namespace MichaelVinces3A.Practica2
             {
                 Console.WriteLine("Programa 6");
                 Console.WriteLine("*************************************************");
-                Console.WriteLine("*********                              **********");
+                Console.WriteLine("****      SUMA DE LOS NÚMEROS DESEADOS      *****");
                 Console.WriteLine("*************************************************");
-                
+                int Numero, Suma = 0, contador = 0;
+                Console.WriteLine("Cuando digite 0 se terminará el proceso calculando la suma\n de los números previamente ingresados...");
+                do
+                {
+                    contador++;
+                    Console.Write("Ingrese el número " + contador + ": ");
+                    Numero = int.Parse(Console.ReadLine());
+                    Suma = Suma + Numero;
+                } while (Numero != 0);
+                contador = contador - 1;
+                Console.WriteLine("\n________________________________________________");
+                Console.WriteLine("La suma de los " + contador + " números ingresados es " + Suma + ".");
+                Console.WriteLine("________________________________________________");
                 Console.WriteLine("Presione Enter para volver al menú...");
                 Console.ReadLine();
                 Console.Clear();
