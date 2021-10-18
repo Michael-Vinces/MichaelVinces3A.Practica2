@@ -157,8 +157,9 @@ namespace MichaelVinces3A.Practica2
                 do
                 {
                     contador++;
+                    Console.Write(contador + "-> ");
                     Numero = double.Parse(Console.ReadLine());
-                    Console.WriteLine(contador+"->"+Numero);
+                    
                 } while (Numero != 0);
                 Console.WriteLine("\nPrograma Finalizado...");
                 Console.WriteLine("Presione Enter para volver al menú...");
