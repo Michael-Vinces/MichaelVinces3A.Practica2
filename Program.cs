@@ -28,7 +28,7 @@ namespace MichaelVinces3A.Practica2
             Console.WriteLine("05. Suma de 5 números");
             Console.WriteLine("06. Suma de los números deseados");
             Console.WriteLine("07. Tipo de triángulo");
-            Console.WriteLine("08. Múltiplos del 7 del 1 al 100");
+            Console.WriteLine("08. Múltiplos del 7 desde 1 al 100");
             Console.WriteLine("09. Promedio de los números ingresados");
             Console.WriteLine("10. Factorial");
             Console.WriteLine("11. Salir");
@@ -263,10 +263,20 @@ namespace MichaelVinces3A.Practica2
             {
                 Console.WriteLine("Programa 8");
                 Console.WriteLine("*************************************************");
-                Console.WriteLine("************                         ************");
+                Console.WriteLine("*****    MÚLTIPLOS DEL 7 desde 1 al 100     *****");
                 Console.WriteLine("*************************************************");
-                
+                int multiplo=0;
+                do
+                {
+                    multiplo = multiplo + 7;
+                    if (multiplo < 100)
+                    {
+                        Console.WriteLine(multiplo);
+                    }
+                } while (multiplo < 100);
+                Console.WriteLine("\n________________________________________________");
                 Console.WriteLine("Presione Enter para volver al menú...");
+                Console.WriteLine("________________________________________________");
                 Console.ReadLine();
                 Console.Clear();
                 return true;
