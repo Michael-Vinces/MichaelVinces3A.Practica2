@@ -24,7 +24,7 @@ namespace MichaelVinces3A.Practica2
             Console.WriteLine("01. El Mayor de dos números");
             Console.WriteLine("02. Número Par");
             Console.WriteLine("03. El mayor de tres números");
-            Console.WriteLine("04. ");
+            Console.WriteLine("04. Leer números decimales indefinidamente ");
             Console.WriteLine("05. Suma de 5 números");
             Console.WriteLine("06. Suma de los números deseados");
             Console.WriteLine("07. Tipo de triángulo");
@@ -101,12 +101,45 @@ namespace MichaelVinces3A.Practica2
                 return true;
             }
             else if (opcion == "3")
-            {
-                Console.WriteLine("Programa 3");
-                Console.WriteLine("*************************************************");
-                Console.WriteLine("*****************                 ***************");
-                Console.WriteLine("*************************************************");
-                
+            {                
+                int Numero1, Numero2, Numero3;
+                do
+                {
+                    Console.WriteLine("Programa 3");
+                    Console.WriteLine("*************************************************");
+                    Console.WriteLine("******     EL MAYOR DE TRES NÚMEROS        ******");
+                    Console.WriteLine("*************************************************");
+                    Console.WriteLine("Los datos que ingrese deberán ser diferentes!!\n");
+                    Console.Write("Ingrese el primer número: ");
+                    Numero1 = int.Parse(Console.ReadLine());
+                    Console.Write("Ingrese el segundo número: ");
+                    Numero2 = int.Parse(Console.ReadLine());
+                    Console.Write("Ingrese el tercer número: ");
+                    Numero3 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("________________________________________________");
+                    
+                    if (Numero1 == Numero2 || Numero2==Numero3 ||Numero1==Numero3)
+                    {
+                        Console.WriteLine("ERROR... Existen números iguales, intente nuevamente...");
+                        Console.ReadLine();
+                        Console.Clear();
+                    }
+                    if (Numero1 > Numero2 && Numero1>Numero3)
+                    {
+                        Console.WriteLine("El número " + Numero1 + " es mayor que " + Numero2+" y que el "+Numero3+".");
+                        Console.WriteLine("________________________________________________");
+                    }
+                    if (Numero1 < Numero2 && Numero3<Numero2)
+                    {
+                        Console.WriteLine("El número " + Numero2 + " es mayor que " + Numero1 + " y que el " + Numero3 + ".");
+                        Console.WriteLine("________________________________________________");
+                    }
+                    if (Numero3 > Numero1 && Numero3 > Numero2)
+                    {
+                        Console.WriteLine("El número " + Numero3 + " es mayor que " + Numero1 + " y que el " + Numero2 + ".");
+                        Console.WriteLine("________________________________________________");
+                    }
+                } while (Numero1 == Numero2 || Numero2 == Numero3 || Numero1 == Numero3);
                 Console.WriteLine("Presione Enter para volver al menú...");
                 Console.ReadLine();
                 Console.Clear();
@@ -116,7 +149,7 @@ namespace MichaelVinces3A.Practica2
             {
                 Console.WriteLine("Programa 4");
                 Console.WriteLine("*************************************************");
-                Console.WriteLine("**************                       ************");
+                Console.WriteLine("*******       NÚMEROS DECIMALES          ********");
                 Console.WriteLine("*************************************************");
                 
                 Console.WriteLine("Presione Enter para volver al menú...");
