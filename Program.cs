@@ -151,7 +151,16 @@ namespace MichaelVinces3A.Practica2
                 Console.WriteLine("*************************************************");
                 Console.WriteLine("*******       NÚMEROS DECIMALES          ********");
                 Console.WriteLine("*************************************************");
-                
+                Console.WriteLine("Cuando digite el número 0 se finaliza el programa...");
+                int contador=0;
+                double Numero;
+                do
+                {
+                    contador++;
+                    Numero = double.Parse(Console.ReadLine());
+                    Console.WriteLine(contador+"->"+Numero);
+                } while (Numero != 0);
+                Console.WriteLine("\nPrograma Finalizado...");
                 Console.WriteLine("Presione Enter para volver al menú...");
                 Console.ReadLine();
                 Console.Clear();
@@ -185,9 +194,43 @@ namespace MichaelVinces3A.Practica2
             {
                 Console.WriteLine("Programa 7");
                 Console.WriteLine("*************************************************");
-                Console.WriteLine("***********                             *********");
+                Console.WriteLine("*******           TRIÁNGULOS            *********");
                 Console.WriteLine("*************************************************");
-                
+                double Lado1, Lado2, Lado3;
+                string Respuesta;
+                do
+                {
+                    Console.Write("Ingrese la medida del primer lado: ");
+                    Lado1 = int.Parse(Console.ReadLine());
+                    Console.Write("Ingrese la medida del segundo lado: ");
+                    Lado2 = int.Parse(Console.ReadLine());
+                    Console.Write("Ingrese la medida del tercer lado: ");
+                    Lado3 = int.Parse(Console.ReadLine());
+                    if (Lado1 == Lado2 && Lado1 == Lado3)
+                    {
+                        Console.WriteLine("\nEl triángulo ingresado es un Equilatero.\n");
+                    }                    
+                    else if (Lado1 != Lado2 && Lado1 != Lado3 && Lado2 != Lado3)
+                    {
+                        Console.WriteLine("\nEl triángulo ingresado es un Escaleno.\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nEl triángulo ingresado es un Isóceles.\n");
+                    }
+                    do
+                    {
+                        Console.WriteLine("Desea calcular otro triángulo? Responda S->Si o N->No ");
+                        Respuesta = Console.ReadLine();
+                        Console.WriteLine("________________________________________________");
+                        if (!Respuesta.Equals("S") && !Respuesta.Equals("N"))
+                        {
+                            Console.WriteLine("ERROR.... Solo puede responder |S| (Si) o |N|(No).");
+                            Console.WriteLine("________________________________________________");
+                        }
+
+                    } while (!Respuesta.Equals("S") && !Respuesta.Equals("N"));
+                } while (Respuesta.Equals("S"));
                 Console.WriteLine("Presione Enter para volver al menú...");
                 Console.ReadLine();
                 Console.Clear();
