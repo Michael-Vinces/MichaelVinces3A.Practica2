@@ -196,7 +196,7 @@ namespace MichaelVinces3A.Practica2
                 Console.WriteLine("****      SUMA DE LOS NÚMEROS DESEADOS      *****");
                 Console.WriteLine("*************************************************");
                 int Numero, Suma = 0, contador = 0;
-                Console.WriteLine("Cuando digite 0 se terminará el proceso calculando la suma\n de los números previamente ingresados...");
+                Console.WriteLine("Cuando digite 0 se terminará el proceso calculando \nla suma de los números previamente ingresados...");
                 do
                 {
                     contador++;
@@ -285,10 +285,70 @@ namespace MichaelVinces3A.Practica2
             {
                 Console.WriteLine("Programa 9");
                 Console.WriteLine("*************************************************");
-                Console.WriteLine("********                               **********");
+                Console.WriteLine("********            PROMEDIO           **********");
                 Console.WriteLine("*************************************************");
-                
+                int Numero, contador = 0;
+                double Suma = 0, Promedio=0;
+                Console.WriteLine("Cuando digite 0 se terminará el proceso calculando \nel promedio de los números previamente ingresados...");
+                do
+                {
+                    contador++;
+                    Console.Write("Ingrese el número " + contador + ": ");
+                    Numero = int.Parse(Console.ReadLine());
+                    Suma = Suma + Numero;
+                } while (Numero != 0);
+                contador = contador - 1;
+                Promedio = Suma / contador;
+                Console.WriteLine("\n________________________________________________");
+                Console.WriteLine("El promedio de los " + contador + " números ingresados es " + Promedio + ".");
+                Console.WriteLine("________________________________________________");
                 Console.WriteLine("Presione Enter para volver al menú...");
+                Console.ReadLine();
+                Console.Clear();
+                return true;
+            }
+            else if (opcion == "10")
+            {
+                Console.WriteLine("Programa 10");
+                Console.WriteLine("*************************************************");
+                Console.WriteLine("********           FACTORIAL           **********");
+                Console.WriteLine("*************************************************");
+                Console.WriteLine("Indique un numero entero para realizar\nsu respectivo factorial: ");
+                int Numero = int.Parse(Console.ReadLine());
+                int contador = 0, secuencia = 0, Factorial = 1;
+                while (contador < Numero)
+                {
+                    contador++;
+                    if (contador == 1)
+                    {
+                        Console.Write(Numero + "!= ");
+                        secuencia = Numero;
+                    }
+                    if (secuencia != 1)
+                    {
+                        Console.Write(secuencia + " * ");
+                        if (secuencia > 1)
+                        {
+                            Factorial = Factorial * secuencia;
+                            secuencia = secuencia - 1;
+                        }
+
+                    }
+                    else
+                    {
+                        if (secuencia > 1)
+                        {
+                            Factorial = Factorial * secuencia;
+                        }
+
+
+                        Console.WriteLine(secuencia + " = " + Factorial);
+                    }
+                }
+                Console.WriteLine("El resultado del factorial del número " + Numero + " es: " + Factorial);
+                Console.WriteLine("________________________________________________");
+                Console.WriteLine("Presione Enter para volver al menú...");
+                Console.WriteLine("________________________________________________");
                 Console.ReadLine();
                 Console.Clear();
                 return true;
@@ -300,12 +360,7 @@ namespace MichaelVinces3A.Practica2
                 Console.Clear();
                 return false;
             }
-            else if (opcion == "10")
-            {
-                Console.WriteLine("Programa 10");                          
-            }
-            Console.ReadLine();
-            Console.Clear();
+           
             return false;
 
         }
